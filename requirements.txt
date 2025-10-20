@@ -1,8 +1,19 @@
+# Core framework
 streamlit==1.38.0
-pandas
-numpy
-matplotlib
-scikit-learn
-prophet
-xgboost
-joblib
+
+# Data science
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+joblib>=1.3.2
+
+# Machine Learning Models
+prophet>=1.1.5
+xgboost>=2.0.3
+
+# Visualization
+plotly==5.24.1
+matplotlib>=3.8.0
+
+# PDF Export (optional)
+reportlab>=4.0.
