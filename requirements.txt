@@ -1,32 +1,28 @@
-# Use precompiled wheels to speed up build
+# ใช้ไบนารีเป็นค่าเริ่มต้นเพื่อเร่งความเร็ว
 --only-binary=:all:
-
+--no-binary=prophet,pystan,cmdstanpy
 --extra-index-url https://pypi.org/simple/
 
-# Core Libraries
+# Core
 numpy==2.1.1
 pandas==2.3.3
-scikit-learn==1.5.1
+scikit-learn==1.6.1
 joblib==1.4.2
 
-# Machine Learning
-xgboost==2.0.3
+# ML
+xgboost==2.1.1
 
-# Forecasting (optimized install)
+# Forecasting (อนุญาต build จากซอร์สเฉพาะ 3 ตัวนี้)
 cmdstanpy==1.1.0
-prophet==1.1.5
-Cython==3.0.11
 pystan==3.9.0
+Cython==3.0.11
+prophet>=1.1.5,<1.2
 
-# Web App
+# Web app
 streamlit==1.38.0
 plotly==5.24.0
 
-# Visualization / Misc
+# Viz / misc
 matplotlib==3.9.2
-
-# Prevent runtime timezone errors
 tzdata==2024.1
-
-# Build tool (speeds up installation)
 wheel==0.44.0
