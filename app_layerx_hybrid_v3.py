@@ -45,6 +45,7 @@ else:
     EGG_ROCKET = None
     st.sidebar.warning("🚫 ไม่พบไฟล์ egg_rocket.png ในโฟลเดอร์ assets หรือ /mnt/data/")
 
+
 )
 
 # ---------- theme ----------
