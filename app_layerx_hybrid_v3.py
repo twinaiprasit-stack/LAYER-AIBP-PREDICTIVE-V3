@@ -32,11 +32,19 @@ def _asset(path: str, fallback: str | None = None) -> str | None:
 BG_IMAGE   = _asset("assets/space_bg.png", "/mnt/data/7cc2db54-4b0f-4179-9fd0-4e0411da902c.png")
 CPF_LOGO   = _asset("assets/LOGO-CPF.jpg", "/mnt/data/LOGO-CPF.jpg")
 
-# ✅ แก้ไขส่วนนี้ให้เป็น path แบบ absolute
+# ✅ Absolute + file:// fallback (รองรับทั้ง local และ cloud)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-EGG_ROCKET = _asset(
-    os.path.join(SCRIPT_DIR, "assets", "egg_rocket.png"),
-    "/mnt/data/egg_rocket.png"
+egg_path_local = os.path.join(SCRIPT_DIR, "assets", "egg_rocket.png")
+egg_path_mnt = "/mnt/data/egg_rocket.png"
+
+if os.path.exists(egg_path_local):
+    EGG_ROCKET = f"file://{egg_path_local.replace(os.sep, '/')}"
+elif os.path.exists(egg_path_mnt):
+    EGG_ROCKET = f"file://{egg_path_mnt.replace(os.sep, '/')}"
+else:
+    EGG_ROCKET = None
+    st.sidebar.warning("🚫 ไม่พบไฟล์ egg_rocket.png ในโฟลเดอร์ assets หรือ /mnt/data/")
+
 )
 
 # ---------- theme ----------
