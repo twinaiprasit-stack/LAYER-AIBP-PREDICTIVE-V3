@@ -5,7 +5,7 @@
 
 # Core Libraries
 numpy==2.1.1
-pandas==2.2.2
+pandas==2.3.3
 scikit-learn==1.5.1
 joblib==1.4.2
 
