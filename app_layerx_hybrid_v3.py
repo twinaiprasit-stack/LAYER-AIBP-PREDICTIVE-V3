@@ -46,7 +46,6 @@ else:
     st.sidebar.warning("🚫 ไม่พบไฟล์ egg_rocket.png ในโฟลเดอร์ assets หรือ /mnt/data/")
 
 
-)
 
 # ---------- theme ----------
 def inject_layerx_css():
