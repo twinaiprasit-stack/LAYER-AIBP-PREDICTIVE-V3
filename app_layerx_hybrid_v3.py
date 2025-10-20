@@ -31,7 +31,13 @@ def _asset(path: str, fallback: str | None = None) -> str | None:
 # ---------- assets ----------
 BG_IMAGE   = _asset("assets/space_bg.png", "/mnt/data/7cc2db54-4b0f-4179-9fd0-4e0411da902c.png")
 CPF_LOGO   = _asset("assets/LOGO-CPF.jpg", "/mnt/data/LOGO-CPF.jpg")
-EGG_ROCKET = _asset("assets/egg_rocket.png", "/mnt/data/egg_rocket.png")
+
+# ✅ แก้ไขส่วนนี้ให้เป็น path แบบ absolute
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+EGG_ROCKET = _asset(
+    os.path.join(SCRIPT_DIR, "assets", "egg_rocket.png"),
+    "/mnt/data/egg_rocket.png"
+)
 
 # ---------- theme ----------
 def inject_layerx_css():
