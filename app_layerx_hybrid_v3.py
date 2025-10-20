@@ -29,21 +29,30 @@ def _asset(path: str, fallback: str | None = None) -> str | None:
     return fallback if _exists(fallback or "") else None
 
 # ---------- assets ----------
+import base64
+
 BG_IMAGE   = _asset("assets/space_bg.png", "/mnt/data/7cc2db54-4b0f-4179-9fd0-4e0411da902c.png")
 CPF_LOGO   = _asset("assets/LOGO-CPF.jpg", "/mnt/data/LOGO-CPF.jpg")
 
-# ✅ Absolute + file:// fallback (รองรับทั้ง local และ cloud)
+# ✅ Encode egg_rocket.png เป็น Base64 เพื่อให้แน่ใจว่าแสดงได้ทุกที่
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-egg_path_local = os.path.join(SCRIPT_DIR, "assets", "egg_rocket.png")
-egg_path_mnt = "/mnt/data/egg_rocket.png"
+egg_paths = [
+    os.path.join(SCRIPT_DIR, "assets", "egg_rocket.png"),
+    os.path.join(SCRIPT_DIR, "egg_rocket.png"),
+    "/mnt/data/egg_rocket.png"
+]
 
-if os.path.exists(egg_path_local):
-    EGG_ROCKET = f"file://{egg_path_local.replace(os.sep, '/')}"
-elif os.path.exists(egg_path_mnt):
-    EGG_ROCKET = f"file://{egg_path_mnt.replace(os.sep, '/')}"
-else:
-    EGG_ROCKET = None
-    st.sidebar.warning("🚫 ไม่พบไฟล์ egg_rocket.png ในโฟลเดอร์ assets หรือ /mnt/data/")
+EGG_ROCKET = None
+for p in egg_paths:
+    if os.path.exists(p):
+        with open(p, "rb") as f:
+            encoded = base64.b64encode(f.read()).decode("utf-8")
+            EGG_ROCKET = f"data:image/png;base64,{encoded}"
+        break
+
+if not EGG_ROCKET:
+    st.sidebar.warning("🚫 ไม่พบไฟล์ egg_rocket.png ใน assets หรือ /mnt/data/")
+
 
 
 
