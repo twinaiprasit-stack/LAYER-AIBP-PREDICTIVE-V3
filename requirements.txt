@@ -1,22 +1,19 @@
 pip>=25.0
+# Core
 numpy==1.26.4
 pandas==2.3.3
 scikit-learn==1.6.1
 joblib==1.4.2
-
-# Machine Learning
 xgboost==2.1.1
 
-# Forecasting (prophet-compatible versions)
-cmdstanpy==1.0.8
-prophet==1.1.4
-stanio==0.5.0
+# Forecasting (fixed-compatibility stack)
+cmdstanpy==1.0.8       # มี module compilation
+prophet==1.1.2          # รุ่นสุดท้ายที่เข้ากับ 1.0.8 ได้สมบูรณ์
+stanio==0.3.0           # เวอร์ชันที่ใช้กับ cmdstanpy 1.0.x
 
-# Web App
+# Web / Viz
 streamlit==1.38.0
 plotly==5.24.0
-
-# Visualization / Misc
 matplotlib==3.9.2
 tzdata==2024.1
 wheel==0.44.0
