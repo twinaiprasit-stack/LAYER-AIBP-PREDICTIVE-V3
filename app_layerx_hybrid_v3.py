@@ -74,11 +74,22 @@ def inject_layerx_css():
             background-size: cover; background-position: center;
             opacity: .22; filter: saturate(120%);
         }}
-        .egg-rocket {{
-            position: fixed; top: 22px; right: 34px; z-index: 999;
-            width: 150px; max-width: 22vw; transform: rotate(-10deg);
-            filter: drop-shadow(0 0 16px rgba(255,140,0,0.85));
-            pointer-events: none;
+.egg-rocket {
+    position: fixed;
+    top: 90px;              /* เดิม 22px → เลื่อนลงมา */
+    right: 60px;            /* ขยับขวาเล็กน้อย */
+    z-index: 999;
+    width: 140px; max-width: 22vw;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 0 16px rgba(255,140,0,0.85));
+    pointer-events: none;
+    animation: floatRocket 4s ease-in-out infinite; /* ✨ เพิ่ม animation ลอยเบา ๆ */
+}
+
+@keyframes floatRocket {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-8px) rotate(-8deg); }
+}
         }}
         .lx-title {{ font-size: 32px; font-weight: 800; color: #ccf3ff; margin: 2px 0 0; }}
         .lx-sub   {{ font-size: 13px; color: #8fd9ff; opacity: .95; }}
