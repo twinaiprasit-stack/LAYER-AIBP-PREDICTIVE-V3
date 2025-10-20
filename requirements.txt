@@ -1,23 +1,8 @@
-# Core
-numpy==1.26.4
-pandas==2.3.3
-scikit-learn==1.6.1
-joblib==1.4.2
-xgboost==2.1.1
-
-# Forecasting (stable stack for Prophet + Python 3.13)
-cmdstanpy==1.0.8
-prophet==1.1.1
-holidays==0.26
-LunarCalendar==0.0.9
-convertdate==2.4.0
-tqdm==4.66.5
-ujson==5.10.0
-stanio==0.3.0
-
-# Web / Viz
 streamlit==1.38.0
-plotly==5.24.0
-matplotlib==3.9.2
-tzdata==2024.1
-wheel==0.44.0
+pandas
+numpy
+matplotlib
+scikit-learn
+prophet
+xgboost
+joblib
