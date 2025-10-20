@@ -11,7 +11,7 @@ xgboost==2.1.1
 cmdstanpy==1.0.8
 prophet==1.1.2
 stanio==0.3.0
-holidays==0.28     # ✅ รุ่นสุดท้ายที่ compatible
+holidays==0.28      # ✅ critical fix
 
 # Web / Viz
 streamlit==1.38.0
