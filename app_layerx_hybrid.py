@@ -4,23 +4,29 @@ CPF_LOGO   = _asset("assets/LOGO-CPF.jpg", "/mnt/data/LOGO-CPF.jpg")
 EGG_ROCKET = _asset("assets/egg_rocket.png", "/mnt/data/8e6f79d9-6091-482e-ba98-9cc2d78f85fe.png")
 
 # CSS ปรับสีปุ่ม Export / Download ให้ชัดขึ้น
+def inject_layerx_css():
+    bg_url = BG_IMAGE if os.path.exists(BG_IMAGE) else ""
+    css = f"""
+    <style>
     /* Buttons */
-    .layerx-btn > button {
+    .layerx-btn > button {{
         border-radius: 12px !important;
         border: 1px solid rgba(0,216,255,0.55) !important;
         background: linear-gradient(135deg, rgba(0,216,255,0.12), rgba(0,216,255,0.06)) !important;
-        color: #B8EFFF !important;                  /* ✅ ตัวอักษรฟ้าสว่างขึ้น */
+        color: #B8EFFF !important; /* ✅ ตัวอักษรฟ้าสว่างขึ้น */
         font-weight: 600 !important;
         text-shadow: 0 0 8px rgba(0,216,255,0.35);
         box-shadow: 0 0 10px rgba(0,216,255,0.25), inset 0 0 8px rgba(0,216,255,0.08) !important;
         transition: all 0.2s ease-in-out;
-    }
-    .layerx-btn > button:hover {
+    }}
+    .layerx-btn > button:hover {{
         background: rgba(0,216,255,0.22) !important;
-        color: #FFFFFF !important;                 /* ✅ ขาวเมื่อ hover */
+        color: #FFFFFF !important; /* ✅ ขาวเมื่อ hover */
         transform: translateY(-1px);
         box-shadow: 0 0 14px rgba(0,216,255,0.45), 0 4px 12px rgba(0,216,255,0.15);
-    }
+    }}
+    </style>
+    """
 
 # ---------------- Hybrid Page ----------------
 
