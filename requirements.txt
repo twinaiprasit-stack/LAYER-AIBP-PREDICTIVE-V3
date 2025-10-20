@@ -14,6 +14,7 @@ xgboost>=2.0.3
 # Visualization
 plotly==5.24.1
 matplotlib>=3.8.0
+kaleido>=0.2.1     # ✅ จำเป็นสำหรับ fig.write_image() (ใช้ตอน export PDF)
 
-# PDF Export (optional)
-reportlab>=4.0.
+# PDF Export
+reportlab>=4.0.9   # ✅ ต้องใช้เวอร์ชัน >=4.0.9 เพื่อรองรับ UnicodeCIDFont (ภาษาไทย)
