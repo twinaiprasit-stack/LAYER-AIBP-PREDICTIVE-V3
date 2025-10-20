@@ -26,7 +26,7 @@ except Exception as e:
 # ===============================
 # Assets
 # ===============================
-BG_IMAGE   = _asset("assets/space_bg.png", "/mnt/data/7cc2db54-4b0f-4179-9fd0-4e0411da902c.png")
+BG_IMAGE   = _asset("assets/space_bg.png", "/mnt/data/space_bg.png")
 CPF_LOGO   = _asset("assets/LOGO-CPF.jpg", "/mnt/data/LOGO-CPF.jpg")
 EGG_ROCKET = _asset("assets/egg_rocket.png", "/mnt/data/egg_rocket.png")
 
