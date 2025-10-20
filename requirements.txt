@@ -1,26 +1,13 @@
---only-binary=:all:
---no-binary=prophet,cmdstanpy
---extra-index-url https://pypi.org/simple/
-
-# Core Libraries
+pip>=25.0
 numpy==2.1.1
 pandas==2.3.3
 scikit-learn==1.6.1
 joblib==1.4.2
-
-# Machine Learning
 xgboost==2.1.1
-
-# Forecasting (optimized)
 cmdstanpy==1.1.0
-Cython==3.0.11
-prophet>=1.1.5,<1.2
-
-# Web App
+prophet==1.1.4
 streamlit==1.38.0
 plotly==5.24.0
-
-# Visualization / Misc
 matplotlib==3.9.2
 tzdata==2024.1
 wheel==0.44.0
