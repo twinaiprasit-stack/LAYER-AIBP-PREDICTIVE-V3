@@ -7,11 +7,11 @@ scikit-learn==1.6.1
 joblib==1.4.2
 xgboost==2.1.1
 
-# Forecasting (stable Prophet stack)
+# Forecasting (fully locked stack)
 cmdstanpy==1.0.8
-prophet==1.1.2
+prophet==1.1.2 --no-deps
 stanio==0.3.0
-holidays==0.28      # ✅ critical fix
+holidays==0.28
 
 # Web / Viz
 streamlit==1.38.0
