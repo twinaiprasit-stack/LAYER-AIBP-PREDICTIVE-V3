@@ -10,11 +10,11 @@
 
 | Category | Tools / Frameworks |
 |-----------|--------------------|
-| **Frontend / App** | Streamlit (v1.38+) |
-| **Forecasting** | Prophet (v1.1.5 +) |
-| **Machine Learning** | XGBoost (v2.0.3 +), Scikit-learn (v1.4 +) |
-| **Visualization** | Plotly (v5.24 +), Matplotlib (v3.8 +) |
-| **PDF Export & Font** | ReportLab (v4.0.9 +), Kaleido (v0.2 +) |
+| **Frontend / App** | Streamlit |
+| **Forecasting** | Prophet  |
+| **Machine Learning** | XGBoost , Scikit-learn  |
+| **Visualization** | Plotly , Matplotlib  |
+| **PDF Export & Font** | ReportLab , Kaleido  |
 
 ---
 
@@ -116,5 +116,5 @@ streamlit run app_layerx_hybrid_v4_2.py
 ---
 
 ### 👨‍🚀 Maintainer
-**Layer-X Digital Transformation Team (Egg Business Unit, CPF)**  
+**Layer-X Digital Transformation Team (Layer Business Unit, CPF)**  
 > *Smart Data → Smart Decision → Smart Business*
